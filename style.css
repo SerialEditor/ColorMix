@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Arial', 'Helvetiсa', sans-serif;
+    font-size: 16px;
+    background-color: white;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(100%);
+    overflow: hidden;
+}
+
+.color-group-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 0 3px 1px #999999;
+}
+
+.color-group-filter label {
+    margin-bottom: 10px;
+}
+
+.color-group-filter select {
+    font-size: inherit;
+    width: 50%;
+    max-width: 380px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 3px 1px #6a6a6a;
+}
+
+.color-group-filter select:focus {
+    box-shadow: 0 0 4px 2px #2752d3;
+}
+
+.colors-list {
+    margin: 0;
+}
+
+.color {
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 0 3px 1px #999999;
+}
+
+.color.hidden {
+    display: none;
+}
+
+dt {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+dd {
+    margin: 0;
+}
+
+@media screen and (min-width: 426px) {
+    .colors-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 10px;
+    }
+
+    .color {
+        max-width: 250px;
+        margin-bottom: 0;
+    }
+}
+
+

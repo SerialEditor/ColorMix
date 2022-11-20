@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HEX-colors</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 class="visually-hidden">Шаблоны цветов в HEX-формате</h1>
+        <section class="color-group-filter">
+            <h2 class="visually-hidden">Фильтрация элементов по базовому цвету</h2>
+            <label for="color-group-filter__color-group-select">Отобразить элементы выбранной цветовой группы</label>
+            <select name="selected_color_group" id="color-group-filter__color-group-select">
+                <option value="all">all</option>
+                <option value="black">black</option>
+                <option value="orange">orange</option>
+                <option value="blue">blue</option>
+                <option value="grey">grey</option>
+                <option value="brown">brown</option>
+            </select>
+        </section>
+        <section class="color-elements">
+            <h2 class="visually-hidden">Коллекция шаблонов</h2>
+            <dl class="colors-list">
+                <div class="color" data-base-color="black">
+                    <dt style="background-color: #242424;"></dt>
+                    <dd>#242424</dd>
+                </div>
+                <div class="color" data-base-color="orange">
+                    <dt style="background-color: #e67e22;"></dt>
+                    <dd>#e67e22</dd>
+                </div>
+                <div class="color" data-base-color="blue">
+                    <dt style="background-color: #34495e;"></dt>
+                    <dd>#34495e</dd>
+                </div>
+                <div class="color" data-base-color="grey">
+                    <dt style="background-color: #6a6a6a;"></dt>
+                    <dd>#6a6a6a</dd>
+                </div>
+                <div class="color" data-base-color="grey">
+                    <dt style="background-color: #999999;"></dt>
+                    <dd>#999999</dd>
+                </div>
+                <div class="color" data-base-color="black">
+                    <dt style="background-color: #292929;"></dt>
+                    <dd>#292929</dd>
+                </div>
+                <div class="color" data-base-color="grey">
+                    <dt style="background-color: #f8f5f2"></dt>
+                    <dd>#f8f5f2</dd>
+                </div>
+                <div class="color" data-base-color="brown">
+                    <dt style="background-color: #624530"></dt>
+                    <dd>#624530</dd>
+                </div>
+                <div class="color" data-base-color="brown">
+                    <dt style="background-color: #886e5b"></dt>
+                    <dd>#886e5b</dd>
+                </div>
+            </dl>
+        </section>
+        <template id="new-color-template">
+            <div class="color" data-base-color="#">
+                <dt></dt>
+                <dd></dd>
+            </div>
+        </template>
+        <template id="new-color-group-template">
+            <option value="#"></option>
+        </template>
+        <script src="color-group-filter.js"></script>
+    </body>
+</html>
