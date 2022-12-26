@@ -10,7 +10,7 @@ label {
     cursor: pointer;
 }
 
-input, select {
+input, select, button {
     cursor: pointer;
     border: none;
     outline: none;
@@ -34,7 +34,7 @@ input:focus, select:focus {
     overflow: hidden;
 }
 
-.color-elements__user-alert {
+.state {
     margin-bottom: 15px;
     padding: 10px;
     box-shadow: 0 0 3px 1px #999999;
@@ -44,9 +44,6 @@ input:focus, select:focus {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 15px;
-    padding: 10px;
-    box-shadow: 0 0 3px 1px #999999;
 }
 
 .color-group-filter label {
@@ -60,23 +57,43 @@ input:focus, select:focus {
     padding: 5px;
 }
 
-.colors-list {
+.contrast-setting__notice {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.contrast-setting__control--wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    margin: 0 auto;
+}
+
+.contrast-setting__field {
+    align-self: center;
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.contrast-setting__button--reset {
+    font: inherit;
+    line-height: 1.8rem;
+    color: #ffffff;
+    background-color: #34495e;
+    box-shadow: 0 0 0 1px #2c3e50;
+    border-radius: 1.8rem;
+}
+
+.color-collection__list {
     margin: 0;
 }
 
-.color {
+.color-collection__item {
     display: flex;
-    margin-bottom: 10px;
-    padding: 10px;
-    box-shadow: 0 0 3px 1px #999999;
 }
 
-.color.contrast-setting {
-    color: white;
-    background-color: black;
-}
-
-.color.hidden {
+.color-collection__item.hidden {
     display: none;
 }
 
@@ -90,13 +107,13 @@ dd {
 }
 
 @media screen and (min-width: 426px) {
-    .colors-list {
+    .color-collection__list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 10px;
+        gap: 15px;
     }
 
-    .color {
+    .color-collection__item {
         max-width: 250px;
         margin-bottom: 0;
     }

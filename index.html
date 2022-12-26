@@ -9,10 +9,10 @@
     </head>
     <body>
         <h1 class="visually-hidden">Шаблоны цветов в HEX-формате</h1>
-        <section class="color-group-filter">
-            <h2 class="visually-hidden">Фильтрация элементов по базовому цвету</h2>
-            <label for="color-group-filter__color-group-select">Отобразить элементы выбранной цветовой группы</label>
-            <select name="selected_color_group" id="color-group-filter__color-group-select">
+        <section class="color-group-filter state">
+            <h2 class="visually-hidden">Фильтрация шаблонов по базовому цвету</h2>
+            <label for="color-group-filter__color-group-select">Отобразить шаблоны выбранной цветовой группы</label>
+            <select class="color-group-select" name="selected_color_group" id="color-group-filter__color-group-select">
                 <option value="all">all</option>
                 <option value="black">black</option>
                 <option value="orange">orange</option>
@@ -21,65 +21,64 @@
                 <option value="brown">brown</option>
             </select>
         </section>
-        <section class="color-elements">
+        <section class="color-collection">
             <h2 class="visually-hidden">Коллекция шаблонов</h2>
-            <p class="color-elements__user-alert">Кликните по элементу для смены контраста</p>
-            <dl class="colors-list">
-                <div class="color" data-base-color="black">
+            <section class="contrast-setting state">
+                <h3 class="visually-hidden">Настройка контраста шаблона</h3>
+                <p class="contrast-setting__notice">Настройте контраст, выбрав нужный цвет из поля и кликнув по шаблону</p>
+                <div class="contrast-setting__control--wrapper">
+                    <label class="visually-hidden" for="contrast-setting-field">Выберите цвет:</label>
+                    <input class="contrast-setting__field" type="color" name="template_contrast_color" id="contrast-setting-field">
+                    <button class="contrast-setting__button--reset" type="button">Вернуть исходный фон</button>
+                </div>
+            </section>
+            <dl class="color-collection__list">
+                <div class="color-collection__item state" data-base-color="black">
                     <dt style="background-color: #242424;"></dt>
                     <dd>#242424</dd>
                 </div>
-                <div class="color" data-base-color="orange">
+                <div class="color-collection__item state" data-base-color="orange">
                     <dt style="background-color: #e67e22;"></dt>
                     <dd>#e67e22</dd>
                 </div>
-                <div class="color" data-base-color="blue">
+                <div class="color-collection__item state" data-base-color="blue">
                     <dt style="background-color: #34495e;"></dt>
                     <dd>#34495e</dd>
                 </div>
-                <div class="color" data-base-color="grey">
+                <div class="color-collection__item state" data-base-color="grey">
                     <dt style="background-color: #6a6a6a;"></dt>
                     <dd>#6a6a6a</dd>
                 </div>
-                <div class="color" data-base-color="grey">
+                <div class="color-collection__item state" data-base-color="grey">
                     <dt style="background-color: #999999;"></dt>
                     <dd>#999999</dd>
                 </div>
-                <div class="color" data-base-color="black">
+                <div class="color-collection__item state" data-base-color="black">
                     <dt style="background-color: #292929;"></dt>
                     <dd>#292929</dd>
                 </div>
-                <div class="color" data-base-color="grey">
+                <div class="color-collection__item state" data-base-color="grey">
                     <dt style="background-color: #f8f5f2"></dt>
                     <dd>#f8f5f2</dd>
                 </div>
-                <div class="color" data-base-color="brown">
+                <div class="color-collection__item state" data-base-color="brown">
                     <dt style="background-color: #624530"></dt>
                     <dd>#624530</dd>
                 </div>
-                <div class="color" data-base-color="brown">
+                <div class="color-collection__item state" data-base-color="brown">
                     <dt style="background-color: #886e5b"></dt>
                     <dd>#886e5b</dd>
                 </div>
-                <div class="color" data-base-color="blue">
+                <div class="color-collection__item state" data-base-color="blue">
                     <dt style="background-color: #2c3e50"></dt>
                     <dd>#2c3e50</dd>
                 </div>
-                <div class="color" data-base-color="blue">
+                <div class="color-collection__item state" data-base-color="blue">
                     <dt style="background-color: #3498db"></dt>
                     <dd>#3498db</dd>
                 </div>
             </dl>
         </section>
-        <template id="new-color-template">
-            <div class="color" data-base-color="#">
-                <dt></dt>
-                <dd></dd>
-            </div>
-        </template>
-        <template id="new-color-group-template">
-            <option value="#"></option>
-        </template>
         <script src="color-group-filter.js"></script>
         <script src="contrast-setting.js"></script>
     </body>
