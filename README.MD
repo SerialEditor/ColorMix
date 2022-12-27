@@ -1,0 +1,1 @@
+Templates of HEX-colors
